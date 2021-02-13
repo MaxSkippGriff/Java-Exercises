@@ -15,10 +15,10 @@ opeimport java.util.*;
     - O(nlog(n) + O(mlog(n)) time | O(1) space
 
     - O(nlog(n) + O(mlog(n)) time where n is the
-      length or arrayOne and m is the length of
+      length of arrayOne and m is the length of
       arrayTwo. We sorth both arrays with time
       complexity of nlog(n) + mlog(m), and iterate
-      through all values once which is o(n)+(m) time.
+      through all values once in o(n)+(m) time.
 
     - O(1) space because no additional memory is
       required since arrays are sorted in place
