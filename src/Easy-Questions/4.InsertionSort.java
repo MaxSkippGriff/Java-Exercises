@@ -9,17 +9,9 @@ import java.util.*;
 /*
     Only Solution - Simple insertion sort
 
-    - Best case: O(n) time | O(1) space
-    - Average case: O(n) time | O(1) space
-    - Worst case: O(n^2) time | O(1) space
-
-    - O(n^2) time because i and j both
-      iterate through the array, which
-      is i * j.
-
-    - O(1) space because no additional
-      memory is required to iterate
-      through the array.
+    - Best: O(n) time | O(1) space
+    - Average: O(n) time | O(1) space
+    - Worst: O(n^2) time | O(1) space
  */
 
 class Program {

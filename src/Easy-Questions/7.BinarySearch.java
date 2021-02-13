@@ -7,17 +7,15 @@ import java.util.*;
 
 
 /*
-    First Solution - Brute Force
+    Only Solution - Basic Binary Search
 
     - O(log(n)) time | O(log(n)) space
 
-    - O(log(n)) time because i and j both
-      iterate through the array, which
-      is i * j.
+    - O(log(n)) time because array is halved
+      until target value is found.
 
-    - O(log(n)) space because no additional
-      memory is required to iterate
-      through the array.
+    - O(log(n)) space because array size
+      is halved until target value is found.
  */
 
 class Program {

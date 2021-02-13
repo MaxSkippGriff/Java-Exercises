@@ -10,17 +10,19 @@ opeimport java.util.*;
 
 
 /*
-    First Solution - Brute Force
+    Only Solution - Brute Force
 
     - O(nlog(n) + O(mlog(n)) time | O(1) space
 
-    - O(nlog(n) + O(mlog(n)) time because i and
-      j both iterate through the array, which
-      is i * j.
+    - O(nlog(n) + O(mlog(n)) time where n is the
+      length or arrayOne and m is the length of
+      arrayTwo. We sorth both arrays with time
+      complexity of nlog(n) + mlog(m), and iterate
+      through all values once which is o(n)+(m) time.
 
-    - O(log(n)) space because no additional
-      memory is required to iterate
-      through the array.
+    - O(1) space because no additional memory is
+      required since arrays are sorted in place
+      and no addtional memory is required.
  */
 
 
@@ -29,12 +31,12 @@ opeimport java.util.*;
 class Program {
 
     public static int[] smallestDifference(int[] arrayOne, int[] arrayTwo) {
-        // Sort arrays
-        Arrays.sort(arrayTwo);
+        // Sort arrays in place
+        Arrays.sort(arrayOne);
         Arrays.sort(arrayTwo);
         /*
           Initialise indexes and smallest
-          and current variables.
+          and current variables with max value.
         */
         int indexOne = 0;
         int indexTwo = 0;
@@ -60,7 +62,7 @@ class Program {
             }
             else {
                 return new int[] {firstVal, secondNum};
-            }
+            } // Update smallest difference
             if (smallestDiff > currentVal) {
                 smallestDiff = currentVal;
                 smallestDiffPair = new int[] {firstVal, secondVal};

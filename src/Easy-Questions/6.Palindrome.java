@@ -7,15 +7,15 @@ import java.util.*;
 
 
 /*
-    Third Solution - Brute Force
+    Only Solution - Optimal solution
 
     - O(n)) time | O(1) space
 
-    - O(log(n)) time because i and j both
-      iterate through the array, which
-      is i * j.
+    - O(n) time because values of array
+      only visited once, and array size
+      is n.
 
-    - O(log(n)) space because no additional
+    - O(1) space because no additional
       memory is required to iterate
       through the array.
  */
