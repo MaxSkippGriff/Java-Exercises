@@ -3,27 +3,28 @@ import java.util.*;
 /*
     Minimum Number of Jumps Question
     ---------------------------------
-    - An array of different values
-    - Each value represents a number of
-      jumps
-    - Find the minimum number of jumps
-      to reach end of array
-    e.g. {4, 1, 2, 3, 1, 1, 5, 5, 3, 1, 2, 1}
-         {4  ...-> 3  .. -> 5       ... -> 1}
+    - An array of values
+    - Each value represents the max number of
+      jumps you can take to the next value
+    - Find the minimum number of jumps to reach
+      end of the array
+
+      e.g. {4, 1, 2, 3, 1, 1, 5, 5, 3, 1, 2, 1}
+           {4  ...-> 3  .. -> 5       ... -> 1}
 */
 
 
 /*
-    Only Solution - Basic solution
+    First Solution - Brute force solution
 
     - O(n^2)) time | O(1) space
 
-    - O(n^2) time because the number of
-      nodes in the linked list is n.
+    - O(n^2) time because we iterate through
+      array once and at each the indices we
+      iterate through all values that precede it.
 
-    - O(1) space because no additional
-      memory is required to reverse the
-      linked list.
+    - O(n) space because n is the length of the
+      numsOfJumps array.
  */
 
 
