@@ -1,4 +1,4 @@
-opeimport java.util.*;
+import java.util.*;
 
 /*
     Smallest Difference Question
