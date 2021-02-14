@@ -33,7 +33,7 @@ class Program {
             prevNode = currNode;
             currNode = nxtNode;
         }
-        return preNode;
+        return prevNode;
     }
 
     static class linkedList {
