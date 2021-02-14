@@ -20,8 +20,8 @@ import java.util.*;
     - O(n^2)) time | O(1) space
 
     - O(n^2) time because we iterate through
-      array once and at each the indices we
-      iterate through all values that precede it.
+      the array once and at each of the indices we
+      iterate through all the values that precede it.
 
     - O(n) space because n is the length of the
       numsOfJumps array.
