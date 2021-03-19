@@ -24,10 +24,12 @@ import java.util.*;
 class Program {
 
     public static int[] twoSum(int[] array, int goalSum) {
+        // Iterate through array checking for pairs that sum to goalSum
         for (int i = 0; i < array.length - 1; i++) {
             int firstNum = array[i];
             for (int j = i + 1; j < array.length; j++) {
                 int secondNum = array[j];
+                // If goalSum found, return pair
                 if (firstNum + secondNum == goalSum) {
                     return new int[] {firstNum, secondNUm};
                 }
@@ -44,7 +46,7 @@ class Program {
 
     - O(n) time because values aren't
       visited more than once since
-      values are stored in the hash
+      they are stored in the hash
       table for reference.
 
     - O(n) space because additional memory
@@ -54,9 +56,12 @@ class Program {
 class Program {
 
     public static int[] twoSum(int[] array, int goalSum) {
+        // Create hash table
         HashMap <Integer> nums = new HashMap<>();
         for (int num : array) {
+            // Potential match equivalent to goalSum - int in array
             int potenMatch = goalSum - num;
+            // If match found, return pair
             if (nums.contains(potenMatch)) {
                 return new int[] {potenMatch, num};
             }
@@ -69,7 +74,7 @@ class Program {
 }
 
 /*
-    Third Solution - Neat solution
+    Third Solution - Neat solution using sort function
 
     - O(n) time | O(n) space
 
@@ -85,20 +90,28 @@ class Program {
 class Program {
 
     public static int[] twoSum(int[] array, int goalSum) {
+        // Sort array
         Arrays.sort(array);
+        // Create leftmost and rightmost indices
         int leftVal = 0;
         int rightVal = array.length - 1;
         int currentSum = leftVal + rightVal;
 
+        // Ensure indices don't overlap
         while (leftVal < rightVal) {
+            // If goalSum found, return pair
             if (currentSum == goalSum) {
                 return new int[] {array[leftVal], array[rightVal]};
             }
+            // If currentSum is less than goalSum, increment leftVal to
+            // increase sum and find goalSum
             else if (currentSum < goalSum) {
-                left++;
+                leftVal++;
             }
+            // If currentSum is greater than goalSum, decrement rightVal to
+            // decrease sum and find goalSum
             else (currentSum > goalSum) {
-                right++;
+                rightVal++;
             }
         }
         return new int[0];
