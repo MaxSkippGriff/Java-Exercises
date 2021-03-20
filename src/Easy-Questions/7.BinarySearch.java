@@ -75,7 +75,7 @@ class Program {
  class Program {
 
       public static int binarySearch(int[] array, int target) {
- 		   // Set leftmost and rightmost indices
+ 		   // Set left and rightmost indices
       int left = 0;
  		   int right = array.length - 1;
 
