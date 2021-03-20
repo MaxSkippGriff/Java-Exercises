@@ -3,8 +3,9 @@ import java.util.*;
 /*
     Binary Search Question
     -----------------------
-    Note: These solutions assume the array is
-    sorted
+    Note:
+    These solutions assume that the test
+    array is sorted.
 */
 
 
