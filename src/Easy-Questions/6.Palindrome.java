@@ -26,14 +26,14 @@ import java.util.*;
 class Program {
 
     public static int[] palindromeCheck(int[] array) {
-        int leftIdx = 0;
-        int rightIdx = string.length() - 1;
-        while (leftIdx < rightIdx) {
-            if (str.charAt(leftIdx) != str.charAt(rightIdx)) {
+        int leftIndex = 0;
+        int rightIndex = string.length() - 1;
+        while (leftIndex < rightIndex) {
+            if (str.charAt(leftIndex) != str.charAt(rightIndex)) {
                 return false;
             }
-            leftIdx++;
-            rightIdx--;
+            leftIndex++;
+            rightIndex--;
         }
         return true;
     }
