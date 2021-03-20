@@ -75,28 +75,29 @@ class Program {
  class Program {
 
       public static int binarySearch(int[] array, int target) {
- 		   // Set left and rightmost indices
-      int left = 0;
- 		   int right = array.length - 1;
+ 		       // Set left and rightmost indices
+          int left = 0;
+ 		       int right = array.length - 1;
 
- 		   // Set potentialMatch to middle of array
- 		   while (left <= right) {
- 			  int middle = (left + right) / 2;
- 			  int potentialMatch = array[middle];
- 			  // If potentialMatch equals target, return value
- 			  if (target == potentialMatch) {
- 				     return middle;
- 			  }
- 			  // If target is less than potentialMatch, move to
- 			  // left half of array
- 			  else if (target < potentialMatch) {
- 				    right = middle - 1;
+ 		       // Set potentialMatch to middle of array
+ 		       while (left <= right) {
+              int middle = (left + right) / 2;
+              int potentialMatch = array[middle];
+
+              // If potentialMatch equals target, return value
+              if (target == potentialMatch) {
+                  return middle;
+              }
+              // If target is less than potentialMatch, move to
+              // left half of array
+              else if (target < potentialMatch) {
+                  right = middle - 1;
+              }
+              // Move left pointer to right half of array
+              else {
+                  left = middle + 1;
+              }
+          }
+          return -1;
       }
- 			  // Move left pointer to right half of array
- 			  else {
- 				    left = middle + 1;
- 			  }
-    }
- 		return -1;
- 	}
  }
