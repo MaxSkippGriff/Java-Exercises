@@ -78,7 +78,6 @@ class Program {
  		       // Set left and rightmost indices
           int left = 0;
  		       int right = array.length - 1;
-
  		       // Set potentialMatch to middle of array
  		       while (left <= right) {
               int middle = (left + right) / 2;
