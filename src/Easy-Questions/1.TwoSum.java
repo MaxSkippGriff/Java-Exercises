@@ -19,6 +19,9 @@ import java.util.*;
     - O(1) space because no additional
       memory is required to iterate
       through the array.
+
+      This is a naive solution which can
+      be improved.
  */
 
 class Program {
@@ -78,10 +81,11 @@ class Program {
 
     - O(n) time | O(n) space
 
-    - O(n) time because values aren't
-      visited more than once because
-      those values are stored in the
-      hash table for reference.
+    - O(nlog(n)) time because we go through the array n
+      times, which is O(n) time, and the array is sorted
+      - the best sorting algorithms (Quick sort, for e.g.)
+      run in log(n) time.
+      O(n) + O(log(n) = O(nlog(n)
 
     - O(1) space because no additional
       memory required.
